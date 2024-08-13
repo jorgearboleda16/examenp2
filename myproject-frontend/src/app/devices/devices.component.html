@@ -1,0 +1,13 @@
+<div>
+    <select [(ngModel)]="newDevice.id_tipo">
+      <option *ngFor="let type of types" [value]="type.id">{{ type.descripcion }}</option>
+    </select>
+    <input type="text" [(ngModel)]="newDevice.nombre" placeholder="Nombre del dispositivo">
+    <input type="number" [(ngModel)]="newDevice.precio" placeholder="Precio">
+    <input type="text" [(ngModel)]="newDevice.ubicacion" placeholder="Ubicación">
+    <button (click)="addDevice()">Agregar Dispositivo</button>
+  
+    <ul>
+      <li *ngFor="let device of devices">{{ device.nombre }} - {{ device.precio }}</li>
+    </ul>
+  </div>
